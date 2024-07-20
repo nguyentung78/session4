@@ -1,0 +1,17 @@
+h1 {
+    font-weight: normal;
+    color: orange;
+}
+.p1 {
+    color: blue;
+}
+.p2 {
+    color: red;
+}
+.p3 {
+    background-color: blanchedalmond;
+    padding: 20px;
+}
+span {
+    font-weight: bold;
+}

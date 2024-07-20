@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #F8F9FA;
+            width: 90vw;
+            max-width: 490px;
+            min-width: 300px;
+            margin: 10px auto;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        div {
+            margin-bottom: 10px;
+        }
+
+        .dau {
+            display: flex;
+            gap: 10px;
+        }
+
+        .dau>div {
+            flex: 1;
+        }
+
+        #dau {
+            padding: 7px;
+            width: 100%;
+            box-sizing: border-box;
+            margin-top: 8px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+        }
+
+        .giua span {
+            padding: 10px;
+            background-color: F8F9FA;
+            border-right: 1px solid #ced4da;
+        }
+
+        .giua {
+            display: flex;
+            align-items: center;
+            border-radius: 4px;
+            border: 1px solid #ced4da;
+            overflow: hidden;
+            width: 100%;
+            margin-top: 8px;
+            margin-bottom: 20px;
+        }
+
+        .giua input {
+            border: none;
+            outline: none;
+            padding: 10px;
+            width: 100%;
+        }
+
+        .giua2 label,
+        .giua2 input {
+            display: block;
+            width: 100%;
+            margin-top: 8px;
+        }
+
+        .giua2 input {
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+        }
+
+        .giua2 {
+            margin-bottom: 20px;
+        }
+
+        select,
+        input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            margin-top: 9px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+        }
+
+        .giua3 {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .giua3 input[type="checkbox"],
+        input[type="radio"] {
+            width: auto;
+        }
+
+        .giua3 label {
+            margin: 0;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #ced4da;
+            margin: 20px 0;
+        }
+
+        .cuoi {
+            display: flex;
+        }
+
+        .cuoi>div {
+            display: flex;
+            flex-direction: column;
+            margin-right: 10px;
+        }
+
+        input[name="exp"] {
+            width: 150px;
+        }
+
+        input[name="cvv"] {
+            width: 100px;
+        }
+
+        button {
+            background-color: rgb(75, 75, 250);
+            color: white;
+            padding: 10px;
+            width: 100%;
+            border: 1px solid;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <h2>Billing address</h2>
+        <div class="dau">
+            <div>
+                <label for="fname">First name</label>
+                <input type="text" name="fname" id="dau">
+            </div>
+            <div>
+                <label for="lname">Last name</label>
+                <input type="text" name="lname" id="dau">
+            </div>
+        </div>
+        <div>
+            <label for="Uname">Username</label>
+            <div class="giua">
+                <span>@</span>
+                <input type="text" name="Uname" placeholder="Username">
+            </div>
+            <div class="giua2">
+                <label for="email">Email <span style="color: #85898B;">(Optional)</span></label>
+                <input type="text" name="email" id="email" placeholder="you@example.com">
+            </div>
+            <div class="giua2">
+                <label for="address">Address</label>
+                <input type="text" name="address" id="address" placeholder="1234 Main St">
+            </div>
+            <div class="giua2">
+                <label for="addr2">Address 2 <span style="color: #85898B;">(Optional)</span></label>
+                <input type="text" name="addr2" id="addr2" placeholder="Apartment or suite">
+            </div>
+        </div>
+        <div class="dau">
+            <div>
+                <label for="contry">Country</label>
+                <select id="contry">
+                    <option value="Choose">Choose...</option>
+                </select>
+            </div>
+            <div>
+                <label for="state">State</label>
+                <select id="state">
+                    <option value="Choose">Choose...</option>
+                </select>
+            </div>
+            <div>
+                <label for="zip">Zip</label>
+                <input type="text" name="zip" id="zip">
+            </div>
+        </div>
+        <hr>
+        <div class="giua3">
+            <input type="checkbox" name="checkbox1" id="checkbox1">
+            <label for="checkbox1">Shipping address is the same as my billing</label>
+        </div>
+        <div class="giua3">
+            <input type="checkbox" name="checkbox2" id="checkbox2">
+            <label for="checkbox2">Save this infomation for next time</label>
+        </div>
+        <hr>
+        <h2>Payment</h2>
+        <div class="giua3">
+            <input type="radio" name="ra1" id="ra1">
+            <label for="ra1">Credit card</label>
+        </div>
+        <div class="giua3">
+            <input type="radio" name="ra2" id="ra2">
+            <label for="ra2">Debit card</label>
+        </div>
+        <div class="giua3">
+            <input type="radio" name="ra3" id="ra3">
+            <label for="ra3">PayPal</label>
+        </div>
+        <br>
+        <div class="dau">
+            <div>
+                <label for="nac">Name on card</label>
+                <input type="text" name="nac" id="nac">
+                <p style="color: darkgrey; font-size: 0.8em;">Full name as displayed on card</p>
+            </div>
+            <div>
+                <label for="can">Credit card number</label>
+                <input type="text" name="can" id="can">
+            </div>
+        </div>
+        <div class="cuoi">
+            <div>
+                <label for="exp">Expiration</label>
+                <input type="text" name="exp" id="exp">
+            </div>
+            <div>
+                <label for="cvv">CVV</label>
+                <input type="text" name="cvv" id="cvv">
+            </div>
+        </div>
+        <hr>
+        <button>Continue to checkout</button>
+    </form>
+</body>
+
+</html>
